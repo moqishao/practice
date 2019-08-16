@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .content {
+      width: 960px;
+      margin: 0 auto;
+      position: relative;
+    }
+    header {
+      height: 50px;
+      background-color: black;
+    }
+    .banner {
+      height: 200px;
+      background-color: rgb(86, 209, 37);
+    }
+    .Logo {
+      padding-top: 5px;
+      font: bold 25px microsoft yahei;
+      color: white;
+    }
+    header nav {
+      display: flex;
+      width: 150px;
+      flex-direction: row;
+      justify-content: space-between;
+      font-size: 12px;
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      color: white;
+    }
+    .banner .content {
+      height: 100%;
+    }
+    .banner .list {
+      position: absolute;
+      right: 1px;
+      bottom: 5px;
+      width: 100px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+    .banner .block {
+      width: 20px;
+      height: 25px;
+      background-color: white;
+      border: 0.5px solid gray;
+      text-align: center;
+      font-size: 10px;
+      opacity: 0.2;
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .banner .block div {
+      position: absolute;
+      bottom: 5px;
+    }
+    .banner .second {
+      height: 40px;
+      opacity: 1;
+    }
+    .page>nav {
+      border-bottom: 0.5px solid lightgray;
+    }
+    .page>nav .list{
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+    }
+    .page>nav .list div{
+      width: 70px;
+      height: 35px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      border-top-left-radius: 15px;
+      border-top-right-radius: 15px;
+      position: relative;
+      bottom: -1px;
+    }
+    .not {
+      background-color: rgba(240, 239, 239, 0.972);
+      border: 1px solid lightgray;
+    }
+    .current {
+      background-color: white;
+      border-width: 1px;
+      border-style: solid;
+      border-left-color: lightgray;
+      border-top-color: lightgray;
+      border-right-color: lightgray;
+      border-bottom-color: white;
+    }
+    .maincontent .content {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .maincontent .content div{
+      border: 1px solid lightgray;
+      height: 150px;
+      margin: 5px 5px 0 0;
+    }
+    footer {
+      height: 120px;
+      background-color: rgb(87, 86, 86);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    footer div {
+      position: relative;
+      top: 10px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <div class="content">
+        <div class="Logo">Logo</div>
+        <nav>
+          <div>GitHub</div>
+          <div>Register</div>
+          <div>Log in</div>
+        </nav>
+      </div>
+    </header>
+    <div class="banner">
+      <div class="content">
+        <div class="list">
+          <div class="block first"><div>1</div></div>
+          <div class="block second"><div>2</div></div>
+          <div class="block third"><div>3</div></div>
+          <div class="block forth"><div>4</div></div>
+        </div>
+      </div>
+    </div>
+    <nav>
+      <div class="content">
+        <div class="list">
+          <div class="current">
+            <div>HOME</div>
+          </div>
+          <div class="not">
+            <div>PROFILE</div>
+          </div>
+          <div class="not">
+            <div>ABOUT</div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <div class="maincontent">
+      <div class="content">
+        <div style="width:350px"></div>
+        <div style="width:350px"></div>
+        <div style="width:200px"></div>
+        <div style="width:200px"></div>
+        <div style="width:200px"></div>
+        <div style="width:200px"></div>
+        <div style="width:200px"></div>
+        <div style="width:330px"></div>
+        <div style="width:330px"></div>
+        <div style="width:270px"></div>
+      </div>
+    </div>
+    <footer>
+        <div>2018 www.baidu.com</div>
+    </footer>
+  </div>
+</body>
+</html>
