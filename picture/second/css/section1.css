@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    width: 100rem;
+    font-family: Montserrat;
+}
+
+.one {
+    height: 61.875rem;
+    width: 100rem;
+    position: relative;
+    background-image: url(../front-end/图层1.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #fff;
+}
+
+.one .content {
+    position: absolute;
+    height: 61.875rem;
+    width: 100rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.one h1 {
+    position: absolute;
+    top: 13rem;
+    font-size: 3.9rem;
+    font-weight: 200;
+    line-height: 4.5rem;
+}
+
+.one .content>p {
+    position: absolute;
+    top: 21.4rem;
+    width: 47.9rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
+    opacity: 0.7;
+    font-weight: 200;
+    text-align: center;
+}
+
+.one .form {
+    position: absolute;
+    top: 33.1rem;
+    width: 60.6rem;
+    height: 15.6rem;
+    border-radius: .1rem;
+    border: solid .1rem rgba(255,255,255,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.one .form h2 {
+    position: absolute;
+    top: 3.8rem;
+    font-weight: 300;
+    font-size: 1rem;
+    line-height: 1.8rem;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
+}
+
+.one .form>p {
+    position: absolute;
+    top: 5.8rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    opacity: 0.3;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+}
+
+.one .form form {
+    position: absolute;
+    top: 9.3rem;
+    width: 48.1rem;
+    height: 3.1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.one .form form input {
+    width: 16.9rem;
+    height: 3.1rem;
+    border-radius: .1rem;
+    border: solid .1rem rgba(255,255,255,0.2);
+    padding-left: 1.4rem;
+    font-size: .9rem;
+    line-height: 1.6rem;
+    font-weight: 300;
+    background-color: transparent;
+    color: inherit;
+}
+
+.one .form form input:focus {
+    border: solid .1rem rgba(255,255,255,0.8);
+}
+
+.one form button {
+    height: 3.1rem;
+    width: 7.8rem;
+    background-color: #fff;
+    border-radius: .1rem;
+    font-size: .8rem;
+    line-height: 1.4rem;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    outline: none;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.one form button:hover {
+    background-color: #eee;
+}
+
+
+.two {
+    height: 67.8rem;
+    width: 100rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.two h1 {
+    position: absolute;
+    top: 6.2rem;
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 3.3rem;
+    color: #141414;
+}
+
+.two>p {
+    position: absolute;
+    top: 10.3rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    color: #141414;
+    opacity: 0.7;
+    width: 43.4rem;
+    text-align: center;
+}
+
+.two .content {
+    position: absolute;
+    top: 17.1rem;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    width: 60.7rem;
+    height: 48.1rem;
+}
+
+.two .content div {
+    width: 29.4rem;
+    height: 21.3rem;
+}
+
+.two .content>div:nth-child(1){
+    background-image: url(../front-end/张思远大.png);
+}
+.two .content>div:nth-child(2){
+    background-image: url(../front-end/2.png);
+}
+.two .content>div:nth-child(3){
+    background-image: url(../front-end/3.png);
+}
+.two .content>div:nth-child(4){
+    background-image: url(../front-end/沈大师大_meitu_3.png);
+}
+
+.two .content .info {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.65);
+    visibility: hidden;
+    color: #fff;
+}
+
+.two .block:hover .info {
+    visibility: visible;
+}
+
+.two .content .info h2 {
+    position: absolute;
+    top: 6.8rem;
+    text-align: center;
+    font-weight: 400;
+    line-height: 2rem;
+}
+
+.two .content .info p {
+    position: absolute;
+    top: 9.1rem;
+    width: 11.5rem;
+    text-align: center;
+    font-size: .8rem;
+    font-weight: 300;
+    line-height: 1.8rem;
+    opacity: .4;
+    letter-spacing: .1rem;
+}
+
+.two .content .icon {
+    position: absolute;
+    top: 12.1rem;
+    width: 13.3rem;
+    height: 3.4rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.two .content .icon div {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 1.6rem;
+    border: solid .1rem rgba(255,255,255,0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
