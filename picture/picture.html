@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .page {
+      width: 1600px;
+      font-family: Montserrat;
+      overflow: hidden;
+    }
+    .one {
+      width: 1600px;
+      height: 990px;
+      background: url(front-end/图层1.png) no-repeat center center;
+      color: white;
+      z-index: 1;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .black {
+      width: 1600px;
+      background-color: black;
+      opacity: 0.5;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    .one>.black {
+      height: 990px;
+      z-index: 2;
+    }
+    .one .hello {
+      font: lighter 51px Montserrat-ExtraLight;
+      text-align: center;
+      margin-top: 210px;
+      width: 325px;
+      height: 51px;
+      z-index: 3;
+    }
+    .one>.text {
+      position: absolute;
+      top: 340px;
+      width: 775px;
+      height: 86px;
+      z-index: 3;
+      text-align: center;
+      font: lighter 21px/28px Montserrat;
+      color: lightgray;
+    }
+    .one>.sign_up_form {
+      position: absolute;
+      top: 531px;
+      left: 315px;
+      border: 0.5px solid rgb(128, 128, 128, 0.5);
+      width: 970px;
+      height: 250px;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .one .create {
+      font: normal 16px/16px Montserrat;
+      width: 245px;
+      height: 16px;
+      position: absolute;
+      top: 60px;
+      text-transform: uppercase;
+      text-align: center;
+    }
+    .one .free {
+      font: normal 10px/10px Montserrat;
+      width: 170px;
+      height: 15px;
+      position: absolute;
+      top: 94px;
+      text-transform: uppercase;
+      color: gray;
+      text-align: center;
+    }
+    .one .line {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 770px;
+      height: 50px;
+      position: absolute;
+      top: 150px;
+    }
+    .one .name, .one .password {
+      height: 50px;
+      width: 292px;
+      border-radius: 2px;
+      border: 0.5px solid rgba(128, 128, 128, 0.5);
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: 15px;
+      padding-left: 20px;
+    }
+    .one .password {
+      color: gray;
+    }
+    .one .button {
+      height: 50px;
+      width: 127px;
+      border-radius: 2px;
+      border: 0.5px solid rgba(128, 128, 128, 0.5);
+      color: black;
+      background-color: white;
+      font-size: 10px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+    }
+    .two {
+      height: 710px;
+      width: 1600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .two>.title {
+      position: absolute;
+      top: 90px;
+      width: 230px;
+      height: 15px;
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .two .text {
+      position: absolute;
+      top: 141px;
+      width: 660px;
+      height: 96px;
+      font-size: 35px;
+      line-height: 48px;
+      text-align: center;
+    }
+    .two .block {
+      position: absolute;
+      top: 315px;
+      height: 285px;
+      width: 1037px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+    .two .case{
+      width: 438px;
+      height: 117px;
+      display: flex;
+      flex-direction: row;
+      position: relative;
+    }
+    .two .case .right {
+      position: absolute;
+      left: 76px;
+    }
+    .two .case .title {
+      height: 18px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    .two .case .content {
+      margin-top: 29px;
+      color: gray;
+      font-size: 15px;
+      line-height: 25px;
+      height: 50px;
+    }
+    .two .block .phone .img {
+      position: absolute;
+      left: 12px;
+    }
+    .two .block .check .img {
+      position: absolute;
+      left: 8px;
+    }
+    .three {
+      height: 800px;
+      background-image: url(front-end/图层2.png);
+      z-index: 1;
+      position: relative;
+      color: white;
+    }
+    .page>.three>.black {
+      height: 800px;
+      z-index: 2;
+    }
+    .three .left {
+      width: 508px;
+      height: 435px;
+      position: absolute;
+      top: 175.5px;
+      left: 315px;
+      z-index: 3;
+    }
+    .three .title {
+      width: 371px;
+      height: 155px;
+      font-size: 38px;
+      line-height: 52px;
+      font-weight: 300;
+    }
+    .three .text {
+      position: absolute;
+      top: 180px;
+      height: 140px;
+      width: 371px;
+      font-size: 16px;
+      line-height: 28px;
+      color: lightgray;
+    }
+    .three .button {
+      position: absolute;
+      top: 373px;
+      height: 62px;
+      width: 242px;
+      border-radius: 2px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      text-transform: uppercase;
+      border: 0.5px solid gray;
+      font-weight: bold;
+      font-size: 12px;
+    }
+    .three .button div {
+      text-align: center;
+    }
+    .three .left .left {
+      left: 0;
+      color: black;
+      background-color: white;
+    }
+    .three .left .right {
+      left: 271px;
+      color: lightgray;
+    }
+    .three .ipad {
+      height: 604px;
+      width: 647px;
+      position: absolute;
+      top: 104px;
+      left: 955px;
+      z-index: 3;
+    }
+    .three .pic {
+      position: absolute;
+      top: 30px;
+      left: 60px;
+    }
+    .four {
+      height: 580px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-bottom: 1px solid lightgray;
+    }
+    .four .title {
+      height: 30px;
+      width: 540px;
+      font-size: 30px;
+      text-align: center;
+      position: absolute; 
+      top: 102px;
+      line-height: 30px;
+      font-weight: normal;
+    }
+    .four .block {
+      position: absolute;
+      top: 222px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 954px;
+    }
+    .four .block div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 255px;
+    }
+    .four .block div .content {
+      position: absolute;
+      top: 75.5px;
+      color: gray;
+      font-size: 15px;
+      line-height: 26px;
+      text-align: center;
+    }
+    .five {
+      position: relative;
+      height: 1000px;
+      border-bottom: 1px solid lightgray;
+    }
+    .five .left_pic {
+      position: absolute;
+      top: 115px;
+      left: 316px;
+    }
+    .five .right_title {
+      position: absolute;
+      left: 986px;
+      top: 185px;
+      font-size: 16px;
+      line-height: 32px;
+      width: 320px;
+      font-weight: 600;
+    }
+    .five .right_text {
+      position: absolute;
+      top: 268px;
+      left: 986px;
+      font-size: 14px;
+      line-height: 28px;
+      width: 320px;
+      color: gray;
+    }
+    .five .left_title {
+      position: absolute;
+      top: 609px;
+      left: 315px;
+      font-size: 16px;
+      line-height: 32px;
+      width: 320px;
+      font-weight: 600;
+    }
+    .five .left_text {
+      position: absolute;
+      top: 695px;
+      left: 315px;
+      font-size: 14px;
+      line-height: 28px;
+      width: 320px;
+      color: gray;
+    }
+    .five .right_pic {
+      position: absolute;
+      top: 545px;
+      left: 716px;
+    }
+    .six {
+      height: 1086px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+      border-bottom: 1px solid lightgray;
+    }
+    .six>.title {
+      position: absolute;
+      top: 99px;
+      font-size: 35px;
+      line-height: 35px;
+      font-weight: 500;
+    }
+    .six>.text {
+      position: absolute;
+      top: 158.5px;
+      font-size: 15px;
+      line-height: 28px;
+      width: 700px;
+      text-align: center;
+      color: gray;
+    }
+    .six .content {
+      position: absolute;
+      top: 275px;
+      width: 971px;
+      height: 712px;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-content: space-between;
+    }
+    .six .inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+    }
+    .six .left_up .black {
+      width: 470px;
+      height: 340px;
+      opacity: 0.7;
+    }
+    .six .left_up .title {
+      position: absolute;
+      top: 110px;
+      color: white;
+      text-align: center;
+      font-size: 18px;
+      line-height: 18px;
+    }
+    .six .left_up .text {
+      position: absolute;
+      top: 146px;
+      font-size: 12px;
+      line-height: 12px;
+      color: gray;
+      text-transform: uppercase;
+    }
+    .six .left_up .icon {
+      position: absolute;
+      top: 195px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 217px;
+      height: 56px;
+    }
+    .six .left_up .icon div {
+      border: 1px solid gray;
+      border-radius: 28px;
+      width: 54px;
+      height: 54px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+    .seven{
+      height: 700px;
+      position: relative;
+      border-bottom: 1px solid lightgray;
+    }
+    .seven .left {
+      position: absolute;
+      top: 70px;
+      left: 316px;
+      border: 1px solid lightgray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 472px;
+      height: 562px;
+      border-radius: 9px;
+      color: lightgray;
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .seven .left .title {
+      position: absolute;
+      top: 50px;
+      text-transform: uppercase;
+      font-weight: bold;
+      color: black;
+      font-size: 16px;
+      font-weight: 500;
+    }
+    .seven .input {
+      width: 370px;
+      height: 50px;
+      border: 1px solid lightgray;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    .seven .input div {
+      margin-left: 22px;
+    }
+    .seven .email {
+      position: absolute;
+      top: 112px;
+    }
+    .seven .subject {
+      position: absolute;
+      top: 191px;
+    }
+    .seven .message {
+      position: absolute;
+      top: 270px;
+      width: 370px;
+      height: 146px;
+      border: 1px solid lightgray;
+    }
+    .seven .message div {
+      margin: 20px 0 0 22px;
+    }
+    .seven .button {
+      position: absolute;
+      top: 445px;
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      width: 371px;
+      height: 50px;
+      font-size: 12px;
+    }
+    .seven .right {
+      position: absolute;
+      top: 158px;
+      left: 914px;
+    }
+    .seven .right .title {
+      font-size: 42px;
+      font-weight: 300;
+    }
+    .seven .right>.text {
+      font-size: 15px;
+      line-height: 25px;
+      width: 363px;
+      font-weight: 300;
+      color: gray;
+      position: absolute;
+      top: 67px;
+    }
+    .seven .right .relation {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 204px;
+      font-weight: 600;
+      width: 300px;
+      height: 156px;
+    }
+    .seven .right .relation .block {
+      display: flex;
+      flex-direction: row;
+    }
+    .seven .right .relation .block .text {
+      margin-left: 12px;
+    }
+    footer{
+      height: 410px;
+      color: white;
+      background-color: black;
+      position: relative;
+    }
+    footer .column {
+      position: absolute;
+      top: 88px;
+      height: 201px;
+    }
+    footer .column .title {
+      text-transform: uppercase;
+      margin-bottom: 39px;
+      font-size: 14px;
+    }
+    footer .column .text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 151px;
+      font-size: 16px;
+      color: rgba(128, 128, 128, 0.308);
+    }
+    footer .first {
+      left: 214px;
+    }
+    footer .second {
+      left: 514px;
+    }
+    footer .third {
+      left: 815px;
+    }
+    footer .forth {
+      left: 1113px;
+      width: 267px;
+      font-size: 18px;
+      line-height: 1.556;
+    }
+    footer .icon {
+      position: absolute;
+      top: 126px;
+      width: 226px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <div class="one">
+      <div class="black"></div>
+      <div class="hello">Hello World</div>
+      <div class="text">China is speeding up strategic, traffic rules, lavys and regulationgs on accident-incurred liabilities for its smart car industry.Economic information.Daily reported Thursday</div>
+      <div class="sign_up_form">
+        <div class="create">Create your account</div>
+        <div class="free">It is Absolutely free</div>
+        <div class="line">
+          <div class="name">
+            <div class="text">denis@getcraftwork.com</div>
+          </div>
+          <div class="password">
+            <div class="text">Create your password</div>
+          </div>
+          <div class="button">
+            <div class="text">sign up</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="two">
+      <div class="title">Boatloads of Awesome</div>
+      <div class="text">Ready-made, customizable, HTML landing page sections</div>
+      <div class="block">
+        <div class="left case phone">
+          <div class="img">
+            <img src="front-end/Iphone Icon.png">
+          </div>
+          <div class="right">
+            <div class="title">Mobile First</div>
+            <div class="content">All modulz are built mobile-first for maximum device compatibil</div>
+          </div>
+        </div>
+
+        <div class="right check case">
+          <div class="img">
+            <img src="front-end/Check Icon.png">
+          </div>
+          <div class="right">
+            <div class="title">Accessibility</div>
+            <div class="content">Support for IE8, mobile and tablet devices, screenreaders and c</div>
+          </div>
+        </div>
+
+        <div class="left case">
+          <div class="img">
+            <img src="front-end/Pencil Icon.png">
+          </div>
+          <div class="right">
+            <div class="title">Fluid Typography</div>
+            <div class="content">On different screen sizes, fonts automagically scale with the v</div>
+          </div>
+        </div>
+
+        <div class="right case">
+          <div class="img">
+            <img src="front-end/Settings Icon.png">
+          </div>
+          <div class="right">
+            <div class="title">Customization</div>
+            <div class="content">Make any design your own using the Style Editor. Personalize fo</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="three">
+      <div class="black"></div>
+      <div class="left">
+        <div class="title">Supportive policies for China's smart car</div>
+        <div class="text">China will come up with its own smart car standards, traffic rules, laws and regulationgs relating to safty, accroding to the China Industry Innovation Alliance for the Intelligent and Connected Vehicles.</div>
+        <div class="left button">
+          <div>Check out Features</div>
+        </div>
+        <div class="right button">
+          <div>Try product for Free</div>
+        </div>
+      </div>
+      <div class="ipad">
+        <img src="front-end/IPad.png" class="ipad_board">
+        <img src="front-end/Screen.png" class="pic">
+      </div>
+    </div>
+    <div class="four">
+      <div class="title">Try Our Awesome Products</div>
+      <div class="block">
+        <div>
+          <img src="front-end/Singleton.png">
+          <div class="content">Li Jun, a China Academy of Engineering academician and also director of the alliance's experts' committee, said that China will also launch design guidance for smart cars, smart map architecture and standards for test grounds</div>
+        </div>
+        <div>
+          <img src="front-end/Hero.png">
+          <div class="content">Li said the smart car industry is able to enlarge the current car industry by 1 trillion yuan($158.15 billion) and also able to boost fast development in 5G, internet of cars, big data, artificial intelligence and new-energy vehicles.</div>
+        </div>
+        <div>
+          <img src="front-end/Portland.png">
+          <div class="content">Zhang Junyi, a partner with NIO Capital, said that the smart car is the trend for the car industry and China's auto sector will usher in a new key development stage with the improvement of infrastructure, technology, policies and laws.</div>
+        </div>
+      </div>
+    </div>
+    <div class="five">
+      <img src="front-end/图层3.png" class="left_pic">
+      <div class="right_title">Learn How to Improve Your Personal Business</div>
+      <div class="right_text">Li Jun, a China Academy of Engineering academician and also director for the alliance's experts' committee, said that China will alse launch design guidance for smart cars, smart map architecture and standards for test grounds.</div>
+      <div class="left_title">Choose Between Two Beautifully Designed Color Schemes.</div>
+      <div class="left_text">China will come up with its own smart car standards, traffic rules, laws and regulations relating to safty, accroding to the China Industry Innovation Alliance for the Intelligent and Connected Vehicles.</div>
+      <img src="front-end/图层4.png" class="right_pic">
+    </div>
+    <div class="six">
+      <div class="title">Our Awesome Crew</div>
+      <div class="text">Our unique online teaching style makes learning easy for everyone. Whether you are trying to land a new job. brush up on your skills.</div>
+      <div class="content">
+        <div class="block left_up">
+          <img src="front-end/张思远大.png">
+          <div class="info" id="hidden">
+            <div class="black"></div>
+            <div class="inner">
+              <div class="title">Ethan Dutton</div>
+              <div class="text">Senior Visual Designer</div>
+              <div class="icon">
+                <div>
+                  <img src="front-end/Facebook Icon.png">
+                </div>
+                <div>
+                  <img src="front-end/Twitter Icon.png">
+                </div>
+                <div>
+                  <img src="front-end/Instagram Icon.png">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="block right_up">
+          <img src="front-end/2.png">
+        </div>
+        <div class="block left_down">
+          <img src="front-end/3.png">
+        </div>
+        <div class="block right_down">
+          <img src="front-end/沈大师大_meitu_3.png">
+        </div>
+      </div>
+    </div>
+    <div class="seven">
+      <div class="left">
+        <div class="title">Fell free to Write Us</div>
+        <div class="email input">
+          <div>E-mail</div>
+        </div>
+        <div class="subject input">
+          <div>Subject</div>
+        </div>
+        <div class="message">
+          <div>Message</div>
+        </div>
+        <div class="button">
+          <div>Send</div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="title">Contacts</div>
+        <div class="text">Make any design your own using the Style Editor Personalize fornts, colors and layouts to create the custom look you want</div>
+        <div class="relation">
+          <div class="block">
+            <div><img src="front-end/Map Icon.png"></div>
+            <div class="text">360 King Street<br>Feastrvale Trevose, PA 19057  </div>
+          </div>
+          <div class="block">
+            <div><img src="front-end/Phone Icon.png"></div>
+            <div class="text">(755) 564-84-12</div>
+          </div>
+          <div class="block">
+            <div><img src="front-end/Mail Icon.png"></div>
+            <div class="text">youname@mail.com</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="first column">
+        <div class="title">Learn More</div>
+        <div class="text">
+          <div>How it works?</div>
+          <div>Meeting tools</div>
+          <div>Live streaming</div>
+          <div>Contact method</div>
+        </div>
+      </div>
+      <div class="second column">
+        <div class="title">About Us</div>
+        <div class="text">
+          <div>About us</div>
+          <div>Features</div>
+          <div>Privacy police</div>
+          <div>Terms & Conditions</div>
+        </div>
+      </div>
+      <div class="third column">
+        <div class="title">Support</div>
+        <div class="text">
+          <div>F.A.Q.</div>
+          <div>Contact us</div>
+          <div>Live chat</div>
+          <div>Phone call </div>
+        </div>
+      </div>
+      <div class="forth column">
+        <div class="title">Enjoy Your Life</div>
+        <div class="text">Great web UI kit for designers, freelancers or business.</div>
+        <div class="icon">
+          <div><img src="front-end/Twitter Icon.png"></div>
+          <div><img src="front-end/Facebook Icon.png"></div>
+          <div><img src="front-end/Google Icon.png"></div>
+          <div><img src="front-end/Tumbler Icon.png"></div>
+          <div><img src="front-end/Pinterest Icon.png"></div>
+          <div><img src="front-end/LinkedIn Icon.png"></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  </script>
+</body>
+</html>
