@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page {
+    position: absolute;
+    width: 98.75rem;
+    height: 100%;
+    font-family: ProximaNova, sans-serif;
+    display: flex;
+}
+
+.nav {
+    position: fixed;
+    width: 6.3rem;
+    height: 100%;
+    background-color: #1d2531;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 2;
+}
+
+.nav .item {
+    width: 3.75rem;
+    height: 3.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav .item:nth-child(1) {
+    background-image: url(pics/Base6.png);
+    position: absolute;
+    top: 1.25rem;
+}
+.nav .item:nth-child(2) {
+    background-image: url(pics/Base7.png);
+    position: absolute;
+    top: 6.25rem;
+}
+.nav .item:nth-child(3) {
+    background-image: url(pics/Base8.png);
+    position: absolute;
+    top: 11.25rem;
+}
+.nav .item:nth-child(4) {
+    background-image: url(pics/Base5.png);
+    position: absolute;
+    top: 16.25rem;
+}
+
+.nav .setting {
+    position: absolute;
+    bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    width: 3rem;
+}
+
+.nav .Active_Highlight {
+    width: .25rem;
+    height: .25rem;
+    background-image: url(pics/Active_Highlight.png);
+    background-position: center;
+    position: absolute;
+    left: -1.325rem;
+    visibility: hidden;
+}
+
+.nav .item:hover .Active_Highlight {
+    top: 1.75rem;
+    visibility: visible;
+}
+
+
+.menu {
+    position: fixed;
+    left: 6.25rem;
+    width: 15.625rem;
+    height: 100%;
+    background-color: #222c3c;
+    color: #fff;
+    z-index: 2;
+}
+
+.menu .block {
+    width: 11.938rem;
+    position: absolute;
+    left: 1.8125rem;
+    border-bottom: solid .063rem #2a3547;
+    font-weight: 600;
+}
+
+.menu .block .list {
+    font-size: .875rem;
+    line-height: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute;
+    top: 2.6875rem;
+    color: #b7c0cd;
+}
+
+.menu .block:nth-child(1) {
+    top: 1.875rem;
+    height: 14.125rem;
+}
+
+.menu .block:nth-child(1) .list{
+    height: 9.625rem;
+}
+
+.menu .block:nth-child(2) {
+    top: 17.4375rem;
+    height: 12.1875rem;
+}
+
+.menu .block:nth-child(2) .list{
+    height: 7.5625rem;
+} 
+
+.menu .block:nth-child(3) {
+    top: 31rem;
+    height: 12.6875rem;
+    border-bottom: 0;
+}
+
+.menu .block:nth-child(3) .list{
+    height: 9.8125rem;
+} 
+
+.menu h1 {
+    font-size: .75rem;
+    color: #5b6779;
+    position: absolute;
+    text-transform: uppercase;
+}
+
+.menu .setting {
+    width: 1rem;
+    height: 1rem;
+    position: absolute;
+    right: 0;
+    background-image: url(pics/Settings.png);
+    background-position: center;
+}
+
+.menu .storage {
+    width: 11.875rem;
+    height: 1.9375rem;
+    position: absolute;
+    bottom: 1.4375rem;
+    left: 1.875rem;
+    font-size: .875rem;
+    font-weight: 400;
+}
+
+.menu .storage .text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu .storage .number {
+    display: flex;
+}
+
+.menu .storage .pic {
+    position: absolute;
+    top: 1.6875rem;
+    width: 11.875rem;
+    height: .25rem;
+    background-image: url(pics/Base3.png);
+    background-position: center;
+}
+
+.menu .storage .pic .up{
+    position: absolute;
+    background-image: url(pics/Fill.png);
+    height: .25rem;
+    width: 2.5rem;
+    background-position: center;
+}
+
+.menu .block:nth-child(1) .message{
+    position: absolute;
+    top: 4.5rem;
+    right: 0;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: .75rem;
+    background-color: #2ea1f8;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: .875rem;
+}
+
+.menu .block:nth-child(3) .message{
+    position: absolute;
+    top: 2.4375rem;
+    right: 0;
+    width: 2rem;
+    height: 1.5rem;
+    border-radius: .75rem;
+    background-color: #2ea1f8;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: .875rem;
+}
+
+.menu .block:nth-child(3) .attention{
+    position: absolute;
+    top: 6.9375rem;
+    right: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: .75rem;
+    background-color: #cb270a;
+    text-align: center;
+    line-height: 1.5rem;
+    font-size: .875rem;
+}
