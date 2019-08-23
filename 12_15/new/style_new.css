@@ -503,7 +503,7 @@ body {
     width: 9.75rem;
     height: 6.25rem;
     border-radius: .25rem;
-    background: url(pics/picture1.png) center no-repeat;
+    background: url(pics/Picture1.png) center no-repeat;
 }
 .content .message .img2:hover .large {
     width: 100%;
